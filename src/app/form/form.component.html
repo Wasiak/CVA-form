@@ -1,0 +1,16 @@
+<form [formGroup]="itemForm">
+  <div class="item-control" *ngFor="let item of items">
+    <label [for]="item.id" [class.selected]="checkSelection(item.id)">
+      <input
+        type="radio"
+        [id]="item.id"
+        formControlName="itemControl"
+        [value]="item">
+        {{ item.name }}
+      <div class="tooltip">
+        <div class="icon">?</div>
+        <div class="content" [class.visible]="showTooltip">{{ item.description }}</div>
+      </div>
+    </label>
+  </div>
+</form>

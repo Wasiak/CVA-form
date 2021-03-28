@@ -1,0 +1,9 @@
+<div class="header">
+  <div class="title">{{ title }}</div>
+  <div class="toggler" (click)="onToggleExpand()">
+    <fa-icon [icon]="contentExpanded ? chevronUp : chevronDown"></fa-icon>
+  </div>
+</div>
+<div class="content" [class.expanded]="contentExpanded">
+  <app-form></app-form>
+</div>

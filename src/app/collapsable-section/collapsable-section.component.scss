@@ -1,0 +1,39 @@
+:host {
+  margin: 20px auto;
+  width: 80%;
+  border: solid 1px #ccc;
+  display: block;
+  border-radius: 5px;
+  color: #8e8e8e;
+  box-shadow: 0px 0px 6px #ccc;
+
+  .header {
+    background-color: #f1ecec;
+    padding: 20px;
+
+    .title {
+      display: inline-block;
+      width: 90%;
+    }
+
+    .toggler {
+      display: block;
+      cursor: pointer;
+      font-size: 27px;
+      float: right;
+    }
+  }
+
+  .content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s, padding 0.5s;
+    justify-content: center;
+    padding: 0 50px;
+
+    &.expanded {
+      max-height: 500px;
+      padding: 50px;
+    }
+  }
+}
